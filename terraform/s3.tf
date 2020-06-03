@@ -85,4 +85,7 @@ resource "aws_s3_bucket" "logs" {
     Name        = "${local.resource_prefix.value}-logs"
     Environment = local.resource_prefix.value
   }
+  versioning {
+    mfa_delete = true
+  }
 }

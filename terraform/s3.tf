@@ -64,6 +64,9 @@ resource "aws_s3_bucket" "data_science" {
     target_prefix = "log/"
   }
   force_destroy = true
+  versioning {
+    mfa_delete = true
+  }
 }
 
 resource "aws_s3_bucket" "logs" {

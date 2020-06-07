@@ -39,6 +39,7 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   tags = {
     Name = "${local.resource_prefix.value}-ebs-snapshot"
   }
+  encrypted = true
 }
 
 resource "aws_volume_attachment" "ebs_att" {

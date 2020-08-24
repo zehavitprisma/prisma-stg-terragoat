@@ -12,4 +12,5 @@ resource "google_storage_bucket_iam_binding" "allow_public_read" {
 resource "google_storage_bucket" "internal_storage" {
   name          = "terragoat-internal"
   force_destroy = true
+  bucket_policy_only = true
 }

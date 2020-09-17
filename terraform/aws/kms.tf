@@ -16,6 +16,7 @@ resource "aws_kms_key" "customer_key" {
   description = "${local.resource_prefix.value}-customer bucket key"
 
   deletion_window_in_days = 7
+  enable_key_rotation = true
 }
 
 resource "aws_kms_alias" "customer_key_alias" {

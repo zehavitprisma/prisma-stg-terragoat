@@ -21,6 +21,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     encrypt = true
+    
   }
 }
 

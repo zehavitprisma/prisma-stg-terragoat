@@ -1,6 +1,10 @@
+resource "aws_iam_user" "airflow_ci" {
+  name = "test"
+}
+
 resource "aws_iam_user_policy" "test" {
   name = "test-ci"
-  user = "test"
+  user = aws_iam_user.airflow_ci.name
 
   policy = <<EOF
 {

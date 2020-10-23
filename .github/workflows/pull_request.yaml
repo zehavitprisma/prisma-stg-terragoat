@@ -18,5 +18,6 @@ jobs:
       - name: Run checkov
         run: |
           pip install -U checkov
-          script -q -c 'checkov -d terraform'
+          script -q -c 'checkov -d terraform ; echo $? > CKVEXIT'
+          exit $(cat CKVEXIT)
           

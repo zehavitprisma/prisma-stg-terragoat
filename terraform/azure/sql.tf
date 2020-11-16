@@ -63,7 +63,7 @@ resource "azurerm_postgresql_server" "example" {
   administrator_login          = "terragoat"
   administrator_login_password = "Aa12345678"
   version                      = "9.5"
-  ssl_enforcement_enabled      = false
+  ssl_enforcement_enabled      = true
 }
 
 resource "azurerm_postgresql_configuration" "thrtottling_config" {

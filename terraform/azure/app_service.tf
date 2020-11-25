@@ -42,5 +42,6 @@ resource azurerm_app_service "app-service3" {
   auth_settings {
     enabled = false
   }
+  client_cert_enabled = true
 }
 

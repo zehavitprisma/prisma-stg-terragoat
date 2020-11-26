@@ -30,6 +30,9 @@ resource azurerm_app_service "app-service2" {
   auth_settings {
     enabled = false
   }
+  site_config {
+    http2_enabled = true
+  }
 }
 
 resource azurerm_app_service "app-service3" {
@@ -40,7 +43,7 @@ resource azurerm_app_service "app-service3" {
   https_only          = true
 
   auth_settings {
-    enabled = false
+    enabled = true
   }
   client_cert_enabled = true
 }

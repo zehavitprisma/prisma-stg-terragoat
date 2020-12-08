@@ -52,7 +52,6 @@ resource azurerm_network_security_group "bad_sg" {
     destination_port_range = "22-22"
     destination_address_prefix = "*"
   }
-
   security_rule {
     access                 = "Allow"
     direction              = "Inbound"

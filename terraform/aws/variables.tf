@@ -5,6 +5,6 @@ variable "enable_key_rotation" {
 
 variable "versioning_enabled" {
   type        = bool
-  default     = false
+  default     = true
   description = "A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket"
 }

@@ -68,6 +68,14 @@ resource "azurerm_storage_account" "data" {
   }
 }
 
+resource "azurerm_storage_account" "data2" {
+  name                     = "tgsa${var.environment}${random_integer.rnd_int.result}"
+  resource_group_name      = azurerm_resource_group.example.name
+  location                 = azurerm_resource_group.example.location
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+}
+
 resource "azurerm_storage_account_network_rules" "test" {
   resource_group_name  = azurerm_resource_group.example.name
   storage_account_name = azurerm_storage_account.example.name

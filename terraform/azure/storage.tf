@@ -10,6 +10,14 @@ resource "azurerm_managed_disk" "example" {
   }
 }
 
+resource "azurerm_managed_disk" "my-bad-disk" {
+  name                 = "terragoat-disk-2"
+  location             = var.location
+  resource_group_name  = azurerm_resource_group.example.name
+  create_option        = "Empty"
+  disk_size_gb         = 1
+}
+
 resource "azurerm_storage_account" "example" {
   name                     = "tgsa${var.environment}${random_integer.rnd_int.result}"
   resource_group_name      = azurerm_resource_group.example.name

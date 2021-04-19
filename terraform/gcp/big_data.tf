@@ -16,6 +16,11 @@ resource google_sql_database_instance "master_instance" {
       enabled = false
     }
   }
+  settings {
+    ip_configuration {
+      require_ssl = true
+    }
+  }
 }
 
 resource google_bigquery_dataset "dataset" {

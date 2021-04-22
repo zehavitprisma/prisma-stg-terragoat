@@ -13,3 +13,8 @@ resource "google_storage_bucket" "internal_storage" {
   name          = "terragoat-internal"
   force_destroy = true
 }
+
+resource "google_storage_bucket" "storage2" {
+  name          = "storage2"
+  force_destroy = true
+}

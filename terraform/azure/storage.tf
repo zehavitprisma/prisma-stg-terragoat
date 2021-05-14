@@ -37,6 +37,7 @@ resource "azurerm_storage_account" "example" {
       retention_policy_days = 10
     }
   }
+  enable_https_traffic_only = true
 }
 
 resource "azurerm_storage_account" "data" {
@@ -66,6 +67,7 @@ resource "azurerm_storage_account" "data" {
       retention_policy_days = 10
     }
   }
+  enable_https_traffic_only = true
 }
 
 resource "azurerm_storage_account_network_rules" "test" {

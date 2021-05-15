@@ -12,6 +12,16 @@ resource "aws_iam_instance_profile" "default" {
   count = var.enabled ? 1 : 0
   name  = module.label.id
   role  = aws_iam_role.default[0].name
+  tags = {
+    git_commit           = "f1a3726cb53d99856f4e4a77388f3756ba9969ce"
+    git_file             = "terraform-aws-ec2-bastion-server-master/main.tf"
+    git_last_modified_at = "2020-11-09 16:45:37"
+    git_last_modified_by = "68634672+guyeisenkot@users.noreply.github.com"
+    git_modifiers        = "68634672+guyeisenkot"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "0d30dd98-acd6-4e56-a84a-77f89dc14d42"
+  }
 }
 
 resource "aws_iam_role" "default" {
@@ -20,6 +30,16 @@ resource "aws_iam_role" "default" {
   path  = "/"
 
   assume_role_policy = data.aws_iam_policy_document.default.json
+  tags = {
+    git_commit           = "f1a3726cb53d99856f4e4a77388f3756ba9969ce"
+    git_file             = "terraform-aws-ec2-bastion-server-master/main.tf"
+    git_last_modified_at = "2020-11-09 16:45:37"
+    git_last_modified_by = "68634672+guyeisenkot@users.noreply.github.com"
+    git_modifiers        = "68634672+guyeisenkot"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "0bbc379c-7dcb-4ea8-8d72-8f903eac277c"
+  }
 }
 
 data "aws_iam_policy_document" "default" {
@@ -45,7 +65,16 @@ resource "aws_security_group" "default" {
   vpc_id      = var.vpc_id
   description = "Bastion security group (only SSH inbound access is allowed)"
 
-  tags = module.label.tags
+  tags                 = module.label.
+  git_commit           = "f1a3726cb53d99856f4e4a77388f3756ba9969ce"
+  git_file             = "terraform-aws-ec2-bastion-server-master/main.tf"
+  git_last_modified_at = "2020-11-09 16:45:37"
+  git_last_modified_by = "68634672+guyeisenkot@users.noreply.github.com"
+  git_modifiers        = "68634672+guyeisenkot"
+  git_org              = "try-bridgecrew"
+  git_repo             = "terragoat"
+  yor_trace            = "ef9044cb-c971-4d12-b39f-f52f0b9e5c12"
+  tags
 
   ingress {
     protocol  = "tcp"
@@ -100,7 +129,16 @@ resource "aws_instance" "default" {
 
   subnet_id = var.subnets[0]
 
-  tags = module.label.tags
+  tags                 = module.label.
+  git_commit           = "f1a3726cb53d99856f4e4a77388f3756ba9969ce"
+  git_file             = "terraform-aws-ec2-bastion-server-master/main.tf"
+  git_last_modified_at = "2020-11-09 16:45:37"
+  git_last_modified_by = "68634672+guyeisenkot@users.noreply.github.com"
+  git_modifiers        = "68634672+guyeisenkot"
+  git_org              = "try-bridgecrew"
+  git_repo             = "terragoat"
+  yor_trace            = "142ae649-a931-4a17-84e3-a2f673e0a243"
+  tags
 
   metadata_options {
     http_endpoint               = (var.metadata_http_endpoint_enabled) ? "enabled" : "disabled"

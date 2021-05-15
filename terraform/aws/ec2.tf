@@ -18,7 +18,15 @@ export AWS_DEFAULT_REGION=us-west-2
 echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
   tags = {
-    Name = "${local.resource_prefix.value}-ec2"
+    Name                 = "${local.resource_prefix.value}-ec2"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "63c61374-f206-4f80-a31d-0445bf005e96"
   }
 }
 
@@ -28,7 +36,15 @@ resource "aws_ebs_volume" "web_host_storage" {
   #encrypted         = false  # Setting this causes the volume to be recreated on apply 
   size = 1
   tags = {
-    Name = "${local.resource_prefix.value}-ebs"
+    Name                 = "${local.resource_prefix.value}-ebs"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "61c62f1b-e457-4c21-a89c-2a91127fbd87"
   }
 }
 
@@ -37,7 +53,15 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   volume_id   = "${aws_ebs_volume.web_host_storage.id}"
   description = "${local.resource_prefix.value}-ebs-snapshot"
   tags = {
-    Name = "${local.resource_prefix.value}-ebs-snapshot"
+    Name                 = "${local.resource_prefix.value}-ebs-snapshot"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "17300cc6-9a6e-4262-9926-499600dffe6c"
   }
 }
 
@@ -75,6 +99,16 @@ resource "aws_security_group" "web-node" {
     "0.0.0.0/0"]
   }
   depends_on = [aws_vpc.web_vpc]
+  tags = {
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "83d38500-879c-4887-95c0-e1433543bfdd"
+  }
 }
 
 resource "aws_vpc" "web_vpc" {
@@ -82,7 +116,15 @@ resource "aws_vpc" "web_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name = "${local.resource_prefix.value}-vpc"
+    Name                 = "${local.resource_prefix.value}-vpc"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "ffd3fc3f-b1a6-4aad-ac35-07b43cd45346"
   }
 }
 
@@ -93,7 +135,15 @@ resource "aws_subnet" "web_subnet" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${local.resource_prefix.value}-subnet"
+    Name                 = "${local.resource_prefix.value}-subnet"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "c695eb7f-5cf6-441f-af62-4d6add6f15a8"
   }
 }
 
@@ -104,7 +154,15 @@ resource "aws_subnet" "web_subnet2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${local.resource_prefix.value}-subnet2"
+    Name                 = "${local.resource_prefix.value}-subnet2"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "afc9c7b4-e5e2-4132-abe5-1dfca24b0d5f"
   }
 }
 
@@ -113,7 +171,15 @@ resource "aws_internet_gateway" "web_igw" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name = "${local.resource_prefix.value}-igw"
+    Name                 = "${local.resource_prefix.value}-igw"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "7e2bf221-62fb-4cde-83ae-23fa3c07550d"
   }
 }
 
@@ -121,7 +187,15 @@ resource "aws_route_table" "web_rtb" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name = "${local.resource_prefix.value}-rtb"
+    Name                 = "${local.resource_prefix.value}-rtb"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "99f7c80e-2d3c-4f51-b242-219c9f4ef256"
   }
 }
 
@@ -151,7 +225,15 @@ resource "aws_network_interface" "web-eni" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    Name = "${local.resource_prefix.value}-primary_network_interface"
+    Name                 = "${local.resource_prefix.value}-primary_network_interface"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "37c68120-0e8d-4e07-8991-8b1afdd82f09"
   }
 }
 
@@ -163,8 +245,16 @@ resource "aws_flow_log" "vpcflowlogs" {
   vpc_id               = aws_vpc.web_vpc.id
 
   tags = {
-    Name        = "${local.resource_prefix.value}-flowlogs"
-    Environment = local.resource_prefix.value
+    Name                 = "${local.resource_prefix.value}-flowlogs"
+    Environment          = local.resource_prefix.value
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "a2a6461e-e73f-4d01-9141-a3ad0b36361a"
   }
 }
 
@@ -173,8 +263,16 @@ resource "aws_s3_bucket" "flowbucket" {
   force_destroy = true
 
   tags = {
-    Name        = "${local.resource_prefix.value}-flowlogs"
-    Environment = local.resource_prefix.value
+    Name                 = "${local.resource_prefix.value}-flowlogs"
+    Environment          = local.resource_prefix.value
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
+    git_file             = "terraform/aws/ec2.tf"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "try-bridgecrew"
+    git_repo             = "terragoat"
+    yor_trace            = "4300fdec-6b4d-422e-b33e-5d76a487263d"
   }
 }
 

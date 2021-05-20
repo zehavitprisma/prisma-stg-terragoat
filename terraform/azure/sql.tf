@@ -56,7 +56,7 @@ resource "azurerm_mysql_server" "example" {
   backup_retention_days             = 7
   infrastructure_encryption_enabled = true
   public_network_access_enabled     = true
-  ssl_enforcement_enabled           = false
+  ssl_enforcement_enabled           = true
   tags = {
     git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
     git_file             = "terraform/azure/sql.tf"
@@ -67,6 +67,10 @@ resource "azurerm_mysql_server" "example" {
     git_repo             = "terragoat"
     yor_trace            = "9673ee7c-3c8c-4246-b361-b48fb7b3e9e8"
   }
+  threat_detection_policy = {
+    enabled = true
+  }
+  geo_redundant_backup_enabled = true
 }
 
 resource "azurerm_postgresql_server" "example" {
@@ -76,12 +80,12 @@ resource "azurerm_postgresql_server" "example" {
   sku_name                     = "B_Gen5_2"
   storage_mb                   = 5120
   backup_retention_days        = 7
-  geo_redundant_backup_enabled = false
+  geo_redundant_backup_enabled = true
   auto_grow_enabled            = true
   administrator_login          = "terragoat"
   administrator_login_password = "Aa12345678"
   version                      = "9.5"
-  ssl_enforcement_enabled      = false
+  ssl_enforcement_enabled      = true
   tags = {
     git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
     git_file             = "terraform/azure/sql.tf"
@@ -92,6 +96,11 @@ resource "azurerm_postgresql_server" "example" {
     git_repo             = "terragoat"
     yor_trace            = "22be945b-945a-48d7-bcbb-1f844ef1e9de"
   }
+  threat_detection_policy = {
+    enabled = true
+  }
+  public_network_access_enabled = false
+  infrastructure_encryption_enabled = true
 }
 
 resource "azurerm_postgresql_configuration" "thrtottling_config" {

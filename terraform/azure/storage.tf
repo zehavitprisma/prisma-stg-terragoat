@@ -57,6 +57,7 @@ resource "azurerm_storage_account" "example" {
     git_repo             = "terragoat"
     yor_trace            = "71664cb1-d3b0-49cb-b7f6-752bc829fdd0"
   }
+  enable_https_traffic_only = true
 }
 
 resource "azurerm_storage_account" "data" {
@@ -96,6 +97,7 @@ resource "azurerm_storage_account" "data" {
     git_repo             = "terragoat"
     yor_trace            = "822f737d-25dc-4086-b185-2b6ff32bd8b7"
   }
+  enable_https_traffic_only = true
 }
 
 resource "azurerm_storage_account_network_rules" "test" {

@@ -42,6 +42,12 @@ resource azurerm_app_service "app-service1" {
   storage_account = {
     type = "AzureFiles"
   }
+  site_config {
+    http2_enabled = true
+  }
+  logs {
+    failed_request_tracing_enabled = true
+  }
 }
 
 resource azurerm_app_service "app-service2" {

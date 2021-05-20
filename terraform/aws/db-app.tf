@@ -402,6 +402,7 @@ EOF
     git_repo             = "terragoat"
     yor_trace            = "1b7d0766-63b8-4b3f-b12c-6a1325f952af"
   }
+  ebs_optimized = true
 }
 
 output "db_app_public_dns" {

@@ -14,4 +14,7 @@ resource "aws_s3_bucket" "b" {
     git_repo             = "terragoat"
     yor_trace            = "6c42fe12-b490-48fa-add9-eb39d6dfd0ff"
   }
+  versioning {
+    enabled = true
+  }
 }

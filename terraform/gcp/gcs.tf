@@ -11,6 +11,7 @@ resource "google_storage_bucket" "terragoat_website" {
     git_repo             = "terragoat"
     yor_trace            = "10540a13-5613-4edb-80cb-17d6a087455c"
   }
+  uniform_bucket_level_access = true
 }
 
 resource "google_storage_bucket_iam_binding" "allow_public_read" {
@@ -32,4 +33,5 @@ resource "google_storage_bucket" "internal_storage" {
     git_repo             = "terragoat"
     yor_trace            = "f04c9586-ba86-4557-87dd-a30d1b29229e"
   }
+  uniform_bucket_level_access = true
 }

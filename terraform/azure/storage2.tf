@@ -4,3 +4,4 @@ resource "azurerm_storage_account" "storage1" {
   location                 = azurerm_resource_group.example.location
   account_replication_type = "GRS"
 }
+

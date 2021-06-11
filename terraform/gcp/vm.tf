@@ -16,7 +16,7 @@ resource google_compute_instance "server" {
 
   metadata = {
     block-project-ssh-keys = true
+    serial-port-enable = true
     enable-oslogin         = false
-    serial-port-enable     = true
   }
 }

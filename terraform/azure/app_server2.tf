@@ -8,4 +8,11 @@ resource azurerm_app_service "app-service2" {
   auth_settings {
     enabled = false
   }
+  client_cert_enabled = true
+  site_config {
+    ftps_state = "Disabled"
+  }
+  site_config {
+    dotnet_framework_version = "v5.0"
+  }
 }

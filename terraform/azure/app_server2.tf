@@ -8,12 +8,5 @@ resource azurerm_app_service "app-service2" {
   auth_settings {
     enabled = true
   }
-  client_cert_enabled = true
-  site_config {
-    http2_enabled = true
-  }
-  site_config {
-    ftps_state = "Disabled"
-  }
 }
 

@@ -11,3 +11,4 @@ resource "aws_s3_bucket" "b" {
     Environment = local.resource_prefix.value
   }
 }
+

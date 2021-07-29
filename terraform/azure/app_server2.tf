@@ -9,3 +9,4 @@ resource azurerm_app_service "app-service2" {
     enabled = true
   }
 }
+

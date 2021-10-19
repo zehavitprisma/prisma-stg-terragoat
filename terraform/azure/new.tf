@@ -18,5 +18,8 @@ resource azurerm_app_service "app-service2" {
     detailed_error_messages_enabled = true
     failed_request_tracing_enabled = true
   }
+  storage_account {
+    type = "AzureFiles"
+  }
 }
 

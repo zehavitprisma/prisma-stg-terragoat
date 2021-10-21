@@ -137,5 +137,7 @@ resource "aws_s3_bucket" "logs" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "ce72f84f-4cb6-4f67-b540-54d7e998df19"
+    
+    
   }
 }

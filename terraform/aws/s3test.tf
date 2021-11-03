@@ -23,6 +23,7 @@ resource "aws_s3_bucket" "data" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "fc8c2d7a-1997-4fc2-95c1-277cba5c2a38"
+    env = "dev"
   }
   versioning {
     enabled = "${var.versioning_enabled}"

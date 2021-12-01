@@ -72,4 +72,5 @@ resource azurerm_windows_virtual_machine "windows_machine" {
     git_repo             = "terragoat"
     yor_trace            = "47c19e97-e3aa-4463-b1c0-b0c29a20f3cf"
   }
+  allow_extension_operations = false
 }

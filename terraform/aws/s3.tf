@@ -23,6 +23,7 @@ resource "aws_s3_bucket" "data" {
   }
 }
 
+
 resource "aws_s3_bucket" "data2" {
   # bucket is public
   # bucket is not encrypted

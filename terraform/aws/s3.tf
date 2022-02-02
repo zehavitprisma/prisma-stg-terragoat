@@ -4,7 +4,6 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have access logs
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
   force_destroy = true
   tags = {
     Name                 = "${local.resource_prefix.value}-data"
@@ -20,6 +19,13 @@ resource "aws_s3_bucket" "data" {
   }
   versioning {
     enabled = "${var.versioning_enabled}"
+  }
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
   }
 }
 
@@ -108,6 +114,13 @@ resource "aws_s3_bucket" "data_science" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "25565a41-2c9e-45f2-a9e9-6c15b7afcfb6"
+  }
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
   }
 }
 

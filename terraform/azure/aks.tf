@@ -31,5 +31,7 @@ resource azurerm_kubernetes_cluster "k8s_cluster" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "f25ff168-9614-4205-96d4-f212a22cabbb"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }

@@ -25,6 +25,8 @@ EOF
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "25847052-213e-4654-9000-c57924a6ad04"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -54,5 +56,7 @@ resource "aws_lambda_function" "analysis_lambda" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "611e7f1a-047c-4b66-9028-39dd298833b4"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }

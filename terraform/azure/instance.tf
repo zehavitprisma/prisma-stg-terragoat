@@ -37,6 +37,8 @@ resource azurerm_linux_virtual_machine "linux_machine" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "3ae2e82f-bde6-4915-bcd7-9c42a405de73"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -71,5 +73,7 @@ resource azurerm_windows_virtual_machine "windows_machine" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "47c19e97-e3aa-4463-b1c0-b0c29a20f3cf"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }

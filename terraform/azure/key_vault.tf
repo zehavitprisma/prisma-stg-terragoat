@@ -26,6 +26,8 @@ resource "azurerm_key_vault" "example" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "8755a006-6548-499b-839c-15e218556f94"
+    testprod             = "default"
+    testsimple           = "simple"
   }
 }
 
@@ -51,6 +53,8 @@ resource "azurerm_key_vault_key" "generated" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "f6bae3fd-c0c8-4b88-8395-28f9a3d6ec79"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -67,5 +71,7 @@ resource "azurerm_key_vault_secret" "secret" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "3ec84e55-c2f6-41c5-a136-44a1e61107c7"
+    testprod             = "default"
+    testsimple           = "simple"
   }
 }

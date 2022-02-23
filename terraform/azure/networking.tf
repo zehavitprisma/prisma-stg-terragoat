@@ -12,6 +12,8 @@ resource "azurerm_virtual_network" "example" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "6e4b4d6f-e827-4c74-8375-217e82f0c42a"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -41,6 +43,8 @@ resource "azurerm_network_interface" "ni_linux" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "c193559b-d423-4123-b54b-3ee74a2fb3f0"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -63,6 +67,8 @@ resource "azurerm_network_interface" "ni_win" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "dab0d80e-252a-441b-b4f5-dae6f1baf23e"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -103,6 +109,8 @@ resource azurerm_network_security_group "bad_sg" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "b013aa2c-a9de-445c-a155-809d952235a2"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -119,6 +127,8 @@ resource azurerm_network_watcher "network_watcher" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "06cc0461-37df-40b6-bb07-1dc931944ec0"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 
@@ -131,5 +141,10 @@ resource azurerm_network_watcher_flow_log "flow_log" {
   retention_policy {
     enabled = false
     days    = 10
+  }
+  tags = {
+    testprod   = "default"
+    testsimple = "simple"
+    yor_trace  = "2d275946-ba6b-4d71-bf7d-90f191362cc7"
   }
 }

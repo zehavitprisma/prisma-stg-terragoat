@@ -23,6 +23,8 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "118fd7f8-b3d7-43d9-b418-7dd16a646a4c"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }
 

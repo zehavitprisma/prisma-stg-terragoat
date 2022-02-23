@@ -13,6 +13,8 @@ resource "aws_iam_user" "user" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "f9d81ed3-9207-49f5-8761-f3bde6bdb125"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 
 }

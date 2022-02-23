@@ -10,5 +10,7 @@ resource "azurerm_resource_group" "example" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "6bd7ed71-a0c1-4fa5-9c1e-69919579994b"
+    testprod             = "nimrod"
+    testsimple           = "simple"
   }
 }

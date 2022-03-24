@@ -53,7 +53,7 @@ resource "aws_s3_bucket" "data2" {
       }
     }
   }
-}
+        sse_algorithm = "aws:kms"
 
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id

@@ -45,6 +45,19 @@ resource "aws_s3_bucket" "data222" {
   }
 }
 
+
+resource "aws_s3_bucket" "data222_log_bucket" {
+  bucket = "data222-log-bucket"
+}
+
+resource "aws_s3_bucket_logging" "data222" {
+  bucket = aws_s3_bucket.data222.id
+
+  target_bucket = aws_s3_bucket.data222_log_bucket.id
+  target_prefix = "log/"
+}
+
+
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"

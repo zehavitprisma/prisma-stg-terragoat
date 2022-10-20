@@ -27,6 +27,7 @@ EOF
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "cff9836a-83cb-4449-80fb-708d70c3d82f"
+    new5                 = "new5"
   }
 }
 
@@ -45,6 +46,7 @@ resource "aws_ebs_volume" "web_host_storage" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "39317050-34d5-449d-a9fc-818eb1774f33"
+    new5                 = "new5"
   }
 }
 
@@ -62,6 +64,7 @@ resource "aws_ebs_snapshot" "example_snapshot" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "5b7df4d5-a191-4369-aca3-b2138d439a18"
+    new5                 = "new5"
   }
 }
 
@@ -108,6 +111,7 @@ resource "aws_security_group" "web-node" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "9b1c81bd-21c2-469e-bc39-80a54aad8888"
+    new5                 = "new5"
   }
 }
 
@@ -125,6 +129,7 @@ resource "aws_vpc" "web_vpc" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "307d74c8-c192-43ff-ac94-898b943be6ef"
+    new5                 = "new5"
   }
 }
 
@@ -144,6 +149,7 @@ resource "aws_subnet" "web_subnet" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "eb2d1a82-858e-442e-b468-e48b241525b6"
+    new5                 = "new5"
   }
 }
 
@@ -163,6 +169,7 @@ resource "aws_subnet" "web_subnet2" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "21a68ad1-a390-4103-ae3f-7ae03a08db3a"
+    new5                 = "new5"
   }
 }
 
@@ -180,6 +187,7 @@ resource "aws_internet_gateway" "web_igw" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "10a101ef-338e-456d-bddd-a495a798d672"
+    new5                 = "new5"
   }
 }
 
@@ -196,6 +204,7 @@ resource "aws_route_table" "web_rtb" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "b9682f4c-fdc0-425b-92f2-79875e2076a2"
+    new5                 = "new5"
   }
 }
 
@@ -234,6 +243,7 @@ resource "aws_network_interface" "web-eni" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "bbdb7f22-2f8e-41f2-b16a-620f132f2dd1"
+    new5                 = "new5"
   }
 }
 
@@ -255,6 +265,7 @@ resource "aws_flow_log" "vpcflowlogs" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "cf63bd13-dfcb-4361-a9e2-8729714935c9"
+    new5                 = "new5"
   }
 }
 
@@ -273,6 +284,7 @@ resource "aws_s3_bucket" "flowbucket" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "b2b673c8-31f9-46cf-a8f5-2be454893f3b"
+    new5                 = "new5"
   }
 }
 

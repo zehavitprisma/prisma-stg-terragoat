@@ -27,6 +27,7 @@ resource aws_iam_role "iam_for_eks" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "bd7adb80-641d-458c-afcb-7444f6cf62c9"
+    new5                 = "new5"
   }
 }
 
@@ -54,6 +55,7 @@ resource aws_vpc "eks_vpc" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "c8a9e1c6-7d3e-4082-bac8-4af8695b7482"
+    new5                 = "new5"
   }
 }
 
@@ -74,6 +76,7 @@ resource aws_subnet "eks_subnet1" {
     git_repo                                         = "terragoat"
     "kubernetes.io/cluster/$${local.eks_name.value}" = "shared"
     yor_trace                                        = "52b1253b-b6b6-4f12-8537-e37996f2064b"
+    new5                                             = "new5"
   }
 }
 
@@ -94,6 +97,7 @@ resource aws_subnet "eks_subnet2" {
     git_repo                                         = "terragoat"
     "kubernetes.io/cluster/$${local.eks_name.value}" = "shared"
     yor_trace                                        = "76599b94-8cbc-430e-9dd5-92efeda9cea1"
+    new5                                             = "new5"
   }
 }
 
@@ -119,6 +123,7 @@ resource aws_eks_cluster "eks_cluster" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "939faa1c-a25b-4d31-ad75-b713c840fe87"
+    new5                 = "new5"
   }
 }
 

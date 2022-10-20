@@ -30,5 +30,6 @@ resource "aws_security_group" "sg" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "02dd6ff5-f153-4c6d-bc14-24ca7414b0b4"
+    new5                 = "new5"
   }
 }

@@ -17,6 +17,7 @@ resource "azurerm_managed_disk" "example" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "414b46d1-e217-4c9c-a3e1-c41429e81a99"
+    new5                 = "new5"
   }
 }
 
@@ -56,6 +57,7 @@ resource "azurerm_storage_account" "example" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "162a7bb2-53c6-41fa-bcf9-d810f493bc2f"
+    new5                 = "new5"
   }
 }
 
@@ -95,6 +97,7 @@ resource "azurerm_storage_account" "data" {
     git_org              = "try-bridgecrew"
     git_repo             = "terragoat"
     yor_trace            = "2b9bff69-ac76-45b9-8902-4204052c8695"
+    new5                 = "new5"
   }
 }
 

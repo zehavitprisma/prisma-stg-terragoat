@@ -60,5 +60,8 @@ resource azurerm_app_service "app-service2" {
     git_repo             = "terragoat"
     yor_trace            = "1c004765-6fe5-4bcb-9035-553f46ad4bb4"
   }
+  storage_account {
+    type = "AzureFiles"
+  }
 }
 
